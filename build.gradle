@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'app.sanctum.v2'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "app.sanctum.v2"
+        minSdk 24
+        targetSdk 34
+        versionCode 2
+        versionName "1.0.1"
+        resourceConfigurations += ["en"]
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("keystore/sanctum-release.jks")
+            storePassword "sanctumv2"
+            keyAlias "sanctum"
+            keyPassword "sanctumv2"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    bundle {
+        language { enableSplit = true }
+        density { enableSplit = true }
+        abi { enableSplit = true }
+        texture { enableSplit = true }
+    }
+
+    packaging {
+        resources {
+            excludes += ['META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/*.txt']
+        }
+        jniLibs {
+            useLegacyPackaging = false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+}

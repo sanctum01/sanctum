@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sanctum</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #0c0a0b; color: #f3ece6; font-family: Georgia, "Times New Roman", serif; }
+    body {
+      background:
+        radial-gradient(1200px 700px at 50% -10%, rgba(140,70,70,.18), transparent 55%),
+        #0c0a0b;
+    }
+    .wrap { min-height: 100%; display: flex; flex-direction: column; align-items: center; padding: 48px 24px 32px; }
+    img.cover { width: min(100%, 420px); height: 240px; object-fit: cover; border-radius: 18px; opacity: .92; box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+    img.icon { width: 84px; height: 84px; border-radius: 22px; margin-top: -42px; border: 3px solid #0c0a0b; }
+    h1 { font-weight: 600; letter-spacing: .18em; text-transform: uppercase; font-size: 28px; margin: 18px 0 8px; }
+    p { font-family: system-ui, sans-serif; max-width: 420px; text-align: center; line-height: 1.55; color: #d7cdc4; font-size: 15px; }
+    .nav { width: min(100%, 420px); display: grid; gap: 10px; margin-top: 22px; }
+    a.card {
+      display: block; text-decoration: none; color: #f3ece6;
+      background: #1c1718; border: 1px solid rgba(243,236,230,.12);
+      border-radius: 14px; padding: 14px 16px; font-family: system-ui, sans-serif;
+    }
+    a.card strong { display: block; font-size: 15px; }
+    a.card span { display: block; color: #b7aea6; font-size: 12px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img class="cover" src="vesper.webp" alt="Sanctum" />
+    <img class="icon" src="icon.webp" alt="" />
+    <h1>Sanctum</h1>
+    <p>A private companion for a Dominant and Submissive dynamic. Tasks, training, journal, house rules, and the bond — packaged as an Android app.</p>
+    <div class="nav">
+      <a class="card" href="pages/home.html"><strong>Enter Sanctum</strong><span>Open the packaged app shell</span></a>
+      <a class="card" href="pages/library.html"><strong>Library</strong><span>Notes, playbook, scenes, journal</span></a>
+      <a class="card" href="pages/bond.html"><strong>The Bond</strong><span>Companion, training, tasks, rewards</span></a>
+    </div>
+  </div>
+</body>
+</html>
